@@ -4,7 +4,13 @@
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,700&subset=latin-ext' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css" type="text/css">
-  <title>TEHDÄÄN SE TÄNÄÄN</title>
+
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick-theme.css"/>
+
+
+  <base href="{{ .Site.BaseURL }}">
+  <title>{{ .Site.Title }}</title>
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
@@ -24,6 +30,19 @@
     })(window,document,'script','dataLayer','GTM-WD5728');
   </script>
   <!-- End Google Tag Manager -->
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.carousel').slick({
+        autoplay: true,
+        autoplaySpeed: 7000
+      });
+    });
+  </script>
 
   <div class="header">
     <h1>TEHDÄÄN SE TÄNÄÄN</h1>
@@ -45,11 +64,37 @@
         <input type="submit" name="submit" value="Osallistu">
       </form>
     </div>
+
+
+    <div class="carousel">
+      <div class="summary">
+        <img src="solinor-netti.jpeg">
+        <p>
+          Vastaanottokeskukseen on asennettu netti.
+        </p>
+      </div>
+      <div class="summary">
+        <img src="solinor-netti.jpeg">
+        <p>
+          Vastaanottokeskukseen on asennettu netti uudestaan.
+        </p>
+      </div>
+      <div class="summary">
+        <img src="solinor-netti.jpeg">
+        <p>
+          Vastaanottokeskukseen on asennettu netti uudestaan.
+        </p>
+      </div>
+    </div>
   </div>
 
   <div class="footer">
-    <p>www.tehdaansetanaan.fi - www.tehdäänsetänään.fi</p>
+    <p>Tehdään se tänään
+      <a href="https://www.facebook.com/TehdaanSeTanaan"><i class="fa fa-facebook social"></i></a>
+      <a href="https://twitter.com/TehdaanSeTanaan"><i class="fa fa-twitter social"></i></a>
+    </p>
     <p>#TehdäänSeTänään #PieniaTekoja</p>
+    <p class="poweredby">Powered by <a href="https://solinor.fi">Solinor</a></p>
   </div>
 
 </body>

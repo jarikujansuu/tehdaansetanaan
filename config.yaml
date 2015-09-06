@@ -1,0 +1,4 @@
+baseurl: "http://www.tehdäänsetänään.fi/"
+languageCode: "fi-fi"
+title: "TEHDÄÄN SE TÄNÄÄN"
+metaDataFormat: "yaml"

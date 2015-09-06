@@ -68,3 +68,34 @@ input[type=submit]:hover {
 .fa-huge {
     font-size: 10em;
 }
+
+.poweredby {
+    font-size: 50%;
+    margin: 1cm 1cm 1cm 1cm;
+    text-decoration: none;
+}
+
+.poweredby a {
+    color: #FEFEFE;
+    text-decoration: none;
+}
+
+.social {
+    color: #EEEEEE
+}
+.social:hover {
+    color: #FFFFFF
+}
+div.summary {
+    width: 100%;
+    align: center;
+    margin: 2cm 2cm 2cm 2cm;
+}
+.summary img {
+    width: 100%;
+    align: center;
+}
+.carousel {
+    position: relative;
+    align: center;
+}
