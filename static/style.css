@@ -34,7 +34,11 @@ div.footer {
 }
 
 div.focus-input {
-    margin: 2cm 2cm 2cm 2cm;
+    margin-right: 0cm;
+    margin-left: 0cm;
+    margin-top: 2cm;
+    margin-bottom: 2cm;
+    align: center;
 }
 
 .focus-input .thanks {
@@ -47,7 +51,8 @@ div.focus-input {
 }
 
 input[type=email] {
-    width: 18em;
+    width: 70%;
+    max-width: 20em;
     text-align: center;
     font-size: smaller;
     font-weight: 200;
@@ -67,4 +72,36 @@ input[type=submit]:hover {
 
 .fa-huge {
     font-size: 10em;
+}
+
+.poweredby {
+    font-size: 50%;
+    margin: 1cm 1cm 1cm 1cm;
+    text-decoration: none;
+}
+
+.poweredby a {
+    align: bottom;
+    color: #FEFEFE;
+    text-decoration: none;
+}
+
+.social {
+    color: #EEEEEE
+}
+.social:hover {
+    color: #FFFFFF
+}
+div.summary {
+    width: 100%;
+    align: center;
+    margin: 2cm 2cm 2cm 2cm;
+}
+.summary img {
+    width: 100%;
+    align: center;
+}
+.carousel {
+    position: relative;
+    align: center;
 }
