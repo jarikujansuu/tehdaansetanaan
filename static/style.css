@@ -6,6 +6,7 @@
 
     background-color: #42B9FE;
     margin: 2cm 3cm 2cm 3cm;
+    font-weight: 200;
 }
 
 div.header {
@@ -25,8 +26,12 @@ div.header {
     font-size: 175%;
 }
 
-p {
-    font-weight: 200;
+.content p {
+    text-align: justify;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 800px;
+    width: 100%;
 }
 
 div.footer {
@@ -36,8 +41,8 @@ div.footer {
 div.focus-input {
     margin-right: 0cm;
     margin-left: 0cm;
-    margin-top: 2cm;
-    margin-bottom: 2cm;
+    margin-top: 1.5cm;
+    margin-bottom: 1.5cm;
     align: center;
 }
 
@@ -104,4 +109,11 @@ div.summary {
 .carousel {
     position: relative;
     align: center;
+}
+.hilight {
+    font-weight: 400
+}
+
+a {
+    text-decoration: none;
 }
