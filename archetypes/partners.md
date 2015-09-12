@@ -1,6 +1,5 @@
 ---
-company:
-  name: Solinor Oy
-  url: https://solinor.fi
-  logo: img/logo/solinor.png
+name: nimi
+homepage: kotisivu
+logo: 150x150 neliön mallinen kuva
 ---

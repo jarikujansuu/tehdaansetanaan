@@ -83,7 +83,6 @@ input[type=submit]:hover {
 .poweredby {
     font-size: 50%;
     margin: 1cm 1cm 1cm 1cm;
-    text-decoration: none;
 }
 
 .poweredby a {
@@ -119,6 +118,11 @@ a {
     text-decoration: none;
 }
 
+.plain {
+    text-decoration: none;
+    color: #FEFEFE;
+}
+
 div.partners {
     margin: 2cm auto;
     align-items: center;
@@ -134,8 +138,9 @@ div.partner {
 }
 
 .partner img {
-    width: 180px;
+    width: 150px;
     height: auto;
+    border-radius: 50%;
     vertical-align: middle;
 }
 

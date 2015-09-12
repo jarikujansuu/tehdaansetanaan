@@ -85,26 +85,19 @@
     </p>
   </div>
 
-  <div class="partners">
-    <h2>Mukana auttamassa</h2>
-    <div class="partner">
-      <a href="https://solinor.fi" target="_blank"><img src="img/logo/solinor.png"></a>
-    </div>
+  {{ if (gt (where .Site.Pages "Section" "partners" | len) 0) }}
+    <div class="partners">
+      <h2>Mukana auttamassa</h2>
 
-    <div class="partner">
-      <a href="https://www.hs.fi"><img src="img/logo/hs.png"></a>
+      {{ range where .Data.Pages "Section" "partners" }}
+        <div class="partner">
+          <a href="{{ .Params.homepage }}" target="_blank">
+            <img src="{{ .Params.logo }}">
+          </a>
+        </div>
+      {{ end }}
     </div>
-    <div class="partner">
-      <a href="https://solinor.fi" target="_blank"><img src="img/logo/solinor.png"></a>
-    </div>
-    <div class="partner">
-      <a href="https://solinor.fi" target="_blank"><img src="img/logo/solinor.png"></a>
-    </div>
-
-    <div class="partner">
-      <a href="https://www.hs.fi"><img src="img/logo/hs.png"></a>
-    </div>
-  </div>
+  {{ end }}
 
   <div class="footer">
     <p>Tehdään se tänään

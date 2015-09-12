@@ -1,0 +1,1 @@
+Partner logo kuvien pitää olla neliön mallisia. Kuvat skaalataan 150x150 kokoon.
