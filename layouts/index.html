@@ -26,7 +26,7 @@
   <!-- End Google Tag Manager -->
 
   <div class="header">
-    <h1>TEHDÄÄN SE TÄNÄÄN</h1>
+    <h1>Tehdään se tänään</h1>
     <p>Yritykset ihmisen tukena</p>
 
     <i class="fa fa-heart-o fa-huge"></i>
@@ -84,6 +84,20 @@
       ja hymyillään kun avuntarvitsija kohtaa auttajan, Sinut!
     </p>
   </div>
+
+  {{ if (gt (where .Site.Pages "Section" "partners" | len) 0) }}
+    <div class="partners">
+      <h2>Mukana auttamassa</h2>
+
+      {{ range where .Data.Pages "Section" "partners" }}
+        <div class="partner">
+          <a href="{{ .Params.homepage }}" target="_blank">
+            <img src="{{ .Params.logo }}">
+          </a>
+        </div>
+      {{ end }}
+    </div>
+  {{ end }}
 
   <div class="footer">
     <p>Tehdään se tänään
