@@ -5,7 +5,9 @@
     font-size: xx-large;
 
     background-color: #42B9FE;
-    margin: 2cm 3cm 2cm 3cm;
+    align: center;
+    margin: 2cm 1cm 1cm 1cm;
+    font-weight: 300;
 }
 
 div.header {
@@ -25,8 +27,12 @@ div.header {
     font-size: 175%;
 }
 
-p {
-    font-weight: 200;
+.content p {
+    text-align: justify;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 800px;
+    width: 100%;
 }
 
 div.footer {
@@ -34,7 +40,11 @@ div.footer {
 }
 
 div.focus-input {
-    margin: 2cm 2cm 2cm 2cm;
+    margin-right: 0cm;
+    margin-left: 0cm;
+    margin-top: 1.5cm;
+    margin-bottom: 1.5cm;
+    align: center;
 }
 
 .focus-input .thanks {
@@ -47,10 +57,11 @@ div.focus-input {
 }
 
 input[type=email] {
-    width: 18em;
+    width: 70%;
+    max-width: 20em;
     text-align: center;
     font-size: smaller;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 input[type=submit] {
@@ -72,10 +83,15 @@ input[type=submit]:hover {
 .poweredby {
     font-size: 50%;
     margin: 1cm 1cm 1cm 1cm;
-    text-decoration: none;
+}
+
+.poweredby {
+    font-size: 50%;
+    margin: 1cm 1cm 1cm 1cm;
 }
 
 .poweredby a {
+    align: bottom;
     color: #FEFEFE;
     text-decoration: none;
 }
@@ -98,4 +114,66 @@ div.summary {
 .carousel {
     position: relative;
     align: center;
+}
+.hilight {
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+.plain {
+    text-decoration: none;
+    color: #FEFEFE;
+}
+
+div.partners {
+    margin: 2cm auto;
+    align-items: center;
+    max-width: 1200px;
+}
+
+div.partner {
+    display: inline-block;
+    width: 25%;
+    height: 25%;
+    margin: 25px 0px;
+    vertical-align: middle;
+}
+
+.partner img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+div.end-partners {
+    clear: none;
+}
+
+@media only screen and (max-width : 480px) {
+   /* Smartphone view: 1 tile */
+   div.partner {
+      width: 100%;
+   }
+}
+@media only screen and (max-width : 650px) and (min-width : 481px) {
+   /* Tablet view: 2 tiles */
+   div.partner {
+      width: 45%;
+   }
+}
+@media only screen and (max-width : 1050px) and (min-width : 651px) {
+   /* Small desktop / ipad view: 3 tiles */
+   div.partner {
+      width: 33%;
+   }
+}
+@media only screen and (min-width : 1051px) {
+   /* Small desktop / ipad view: 3 tiles */
+   div.partner {
+      width: 23%;
+   }
 }

@@ -1,4 +1,5 @@
-baseurl: "http://www.tehdäänsetänään.fi/"
-languageCode: "fi-fi"
-title: "TEHDÄÄN SE TÄNÄÄN"
-metaDataFormat: "yaml"
+---
+baseurl: http://www.tehdäänsetänään.fi/
+title: "Tehdään se tänään"
+languageCode: fi-fi
+metaDataFormat: yaml
