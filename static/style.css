@@ -7,7 +7,7 @@
     background-color: #42B9FE;
     align: center;
     margin: 2cm 1cm 1cm 1cm;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 div.header {
@@ -61,7 +61,7 @@ input[type=email] {
     max-width: 20em;
     text-align: center;
     font-size: smaller;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 input[type=submit] {
@@ -111,7 +111,7 @@ div.summary {
     align: center;
 }
 .hilight {
-    font-weight: 400
+    font-weight: 400;
 }
 
 a {
