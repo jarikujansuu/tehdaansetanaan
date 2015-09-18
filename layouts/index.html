@@ -108,22 +108,24 @@
     </p>
 
 
-    <div class="section">
-      <h2>Jo tehtynä</h2>
-      <div class="carousel">
-        {{ range where .Data.Pages "Section" "done" }}
-          <div class="carousel-item deed">
-            <a href="{{ .RelPermalink }}">
-              {{ range first 1 .Params.images }}
-                <img data-lazy="{{ . }} ">
-              {{ end }}
-              <div class="company on-image clip">{{ .Params.company.name }} </div>
-              <div class="summary on-image clip">{{ .Summary }}</div>
-              </a>
-          </div>
-        {{ end }}
+    {{ if (ge (where .Site.Pages "Section" "done" | len) 2) }}
+      <div class="section">
+        <h2>Jo tehtynä</h2>
+        <div class="carousel">
+          {{ range where .Data.Pages "Section" "done" }}
+            <div class="carousel-item deed">
+              <a href="{{ .RelPermalink }}">
+                {{ range first 1 .Params.images }}
+                  <img data-lazy="{{ . }} ">
+                {{ end }}
+                <div class="company on-image clip">{{ .Params.company.name }} </div>
+                <div class="summary on-image clip">{{ .Summary }}</div>
+                </a>
+            </div>
+          {{ end }}
+        </div>
       </div>
-    </div>
+    {{ end }}
 
     {{ if (gt (where .Site.Pages "Section" "partners" | len) 0) }}
       <div class="partners">
