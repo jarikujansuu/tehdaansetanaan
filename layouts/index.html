@@ -3,7 +3,7 @@
 <head>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&subset=latin-ext' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="{{ "style.css" | relURL }}" type="text/css">
 
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css"/>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick-theme.css"/>
@@ -38,8 +38,12 @@
   <script type="text/javascript">
     $(document).ready(function(){
       $('.carousel').slick({
+        lazyLoad: 'ondemand',
         autoplay: true,
-        autoplaySpeed: 7000
+        autoplaySpeed: 8000,
+        dots: true,
+        pauseOnHover: true,
+        pauseOnDotsHover: true
       });
     });
   </script>
@@ -87,7 +91,7 @@
       vastaan! Autamme myös julkisesti kumppanisi haastamisessa.
     </p>
     <p>
-      <span class="hilight">Kirjoita meille!</span> Voit myös auttaa tämän haasteen läpiviennissä ja toteuttamisessa vapaaehtoisesti.  Kirjoita meille ja kerro
+      <span class="hilight"><a href="mailto:info@tehdaansetanaan.fi?Subject=Tehdään se tänään" target="mailto">Kirjoita meille!</a></span> Voit myös auttaa tämän haasteen läpiviennissä ja toteuttamisessa vapaaehtoisesti.  Kirjoita meille ja kerro
       miten voisit auttaa itse haastetta ja sen onnistumista: <a href="mailto:info@tehdaansetanaan.fi?Subject=Tehdään se tänään" target="mailto">info@tehdaansetanaan.fi</a>
     </p>
     <p>
@@ -104,41 +108,37 @@
     </p>
 
 
-    <div class="carousel">
-      <div class="summary">
-        <img src="solinor-netti.jpeg">
-        <p>
-          Vastaanottokeskukseen on asennettu netti.
-        </p>
-      </div>
-      <div class="summary">
-        <img src="solinor-netti.jpeg">
-        <p>
-          Vastaanottokeskukseen on asennettu netti uudestaan.
-        </p>
-      </div>
-      <div class="summary">
-        <img src="solinor-netti.jpeg">
-        <p>
-          Vastaanottokeskukseen on asennettu netti uudestaan.
-        </p>
+    <div class="section">
+      <h2>Jo tehtynä</h2>
+      <div class="carousel">
+        {{ range where .Data.Pages "Section" "done" }}
+          <div class="carousel-item deed">
+            <a href="{{ .RelPermalink }}">
+              {{ range first 1 .Params.images }}
+                <img data-lazy="{{ . }} ">
+              {{ end }}
+              <div class="company on-image clip">{{ .Params.company.name }} </div>
+              <div class="summary on-image clip">{{ .Summary }}</div>
+              </a>
+          </div>
+        {{ end }}
       </div>
     </div>
+
+    {{ if (gt (where .Site.Pages "Section" "partners" | len) 0) }}
+      <div class="partners">
+        <h2>Mukana auttamassa</h2>
+
+        {{ range where .Data.Pages "Section" "partners" }}
+          <div class="partner">
+            <a href="{{ .Params.homepage }}">
+              <img src="{{ .Params.logo }}">
+            </a>
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
   </div>
-
-  {{ if (gt (where .Site.Pages "Section" "partners" | len) 0) }}
-    <div class="partners">
-      <h2>Mukana auttamassa</h2>
-
-      {{ range where .Data.Pages "Section" "partners" }}
-        <div class="partner">
-          <a href="{{ .Params.homepage }}" target="_blank">
-            <img src="{{ .Params.logo }}">
-          </a>
-        </div>
-      {{ end }}
-    </div>
-  {{ end }}
 
   <div class="footer">
     <p>Tehdään se tänään
