@@ -6,11 +6,8 @@ company:
 images:
 - image under static dir
 - image under static dir
-tags:
-- tag
-- tag
 
 ---
-Johdanto
+Lyhyt johdanto. Ei otsikoita.
 <!--more-->
 Loput
