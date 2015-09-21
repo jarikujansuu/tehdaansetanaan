@@ -1,5 +1,6 @@
 ---
 name: nimi
-homepage: kotisivu
-logo: 150x150 neliön mallinen kuva
+logo: /img/logo/...
+homepage: https://...
+desc: kuvaus
 ---

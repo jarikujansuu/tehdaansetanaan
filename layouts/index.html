@@ -134,7 +134,9 @@
         {{ range where .Data.Pages "Section" "partners" }}
           <div class="partner">
             <a href="{{ .Params.homepage }}">
-              <img src="{{ .Params.logo }}">
+              <img src="{{ .Params.logo | relURL }}">
+              <div class="name">{{ .Params.name }}</div>
+              <div class="description">{{ .Params.desc }}</div>
             </a>
           </div>
         {{ end }}
